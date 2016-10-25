@@ -1,0 +1,59 @@
+<?php
+	include(NAVIGATION_PATH."/header.php");
+?>
+<div class="container">
+  <?php include(NAVIGATION_PATH."/left-menu.php");?>
+  <div class="content">
+	<h3>Report</h3>
+    <div class="settings_section">
+      <form id="report" name="report" action="<?php echo CONTROLLER_PATH_HTTP;?>/report-controller.php" method="POST">
+		<input type="hidden" id="action" name="action" value="DATABASE" />
+		<ul class="formTable">
+          <li>
+			<b class="red">*</b>
+			<label>Project Name:</label>
+            <input type="text" id="projectName" name="projectName" value="" class="inputfield required"/>
+			<span class="error_message" id="error_projectName">Please enter Project Name</span>
+          </li>
+		  <li>
+            <b class="red">*</b>
+			<label>Sprint Name:</label>
+            <input type="text" id="sprintName" name="sprintName" value="" class="inputfield required"/>
+			<span class="error_message" id="error_sprintName">Please enter Sprint Name</span>
+          </li>
+		  <li>
+			<b class="red">*</b>
+			<label>Sprint Date:</label>
+            <input type="text" id="sprintDate" name="sprintDate" value="" class="inputfield required"/>
+			<span class="error_message" id="error_sprintDate">Please enter Sprint Date</span>
+          </li>
+		  <li>
+			<b class="red">*</b>
+            <label>Action:</label>
+			<input type="radio" name="report_action" value="DATABASE" checked/> <b>Dumb into Database</b>
+			<input type="radio" name="report_action" value="REPORT" /> <b>Generate Report</b>
+          </li>
+		  <li class="report-box">
+			<b class="red">*</b>
+            <label>Directory Path:</label>
+			<input type="text" id="directoryPath" name="directoryPath" value="" class="inputfield required"/>
+			<span class="error_message" id="error_directoryPath">Please enter Directory Path</span>
+          </li>
+		  <li class="report-box">
+			<b class="red">*</b>
+            <label>File Name:</label>
+			<input type="text" id="fileName" name="fileName" value="" class="inputfield required"/>
+			<span class="error_message" id="error_fileName">Please enter File Name</span>
+          </li>
+          <li>
+              <button id="submit" name="submit" type="submit">Save</button>
+              <a href="">Reset</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<?php
+	include(NAVIGATION_PATH."/footer.php");
+?>

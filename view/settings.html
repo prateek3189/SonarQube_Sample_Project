@@ -1,0 +1,49 @@
+<?php
+	include(NAVIGATION_PATH."/header.php");
+?>
+<div class="container">
+  <?php include(NAVIGATION_PATH."/left-menu.php");?>
+  <div class="content">
+	<h3>Settings</h3>
+    <div class="settings_section">
+      <form id="edit_profile" name="edit_profile" action="" method="POST" enctype="multipart/form-data">
+        <ul class="formTable">
+          <li>
+            <label>Base URL:</label>
+            <input type="password" id="old_password" name="old_password" value="" class="inputfield"/>
+          </li>
+          <li>
+              <button id="submit" name="submit" type="submit">Save</button>
+              <a href="">Reset</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+	<h3>Change Password</h3>
+    <div class="settings_section">
+      <form id="edit_profile" name="edit_profile" action="" method="POST" enctype="multipart/form-data">
+        <ul class="formTable">
+          <li>
+            <label>Old Password:</label>
+            <input type="password" id="old_password" name="old_password" value="" class="inputfield"/>
+          </li>
+          <li>
+            <label>New Password:</label>
+            <input type="password" id="new_password" name="new_password" value="" class="inputfield"/>
+          </li>
+          <li>
+            <label>Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" value="" class="inputfield"/>
+          </li>
+          <li>
+              <button id="submit" name="submit" type="submit">Update Password</button>
+              <a href="">Reset</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<?php
+	include(NAVIGATION_PATH."/footer.php");
+?>

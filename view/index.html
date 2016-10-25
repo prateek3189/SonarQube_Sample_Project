@@ -1,0 +1,33 @@
+<?php
+	include_once(NAVIGATION_PATH."/header.php");
+	include_once(NAVIGATION_PATH."/session-message.php");
+?>
+<div class="container">
+  <div class="login_box">
+    <form method="POST" action="<?php echo CONTROLLER_PATH_HTTP;?>login-controller.php">
+		<input type="hidden" name="action" value="login">
+      <ul>
+        <li>
+          <h3>Login</h3>
+        </li>
+        <li>
+          <label><strong class="red">*</strong> Username:</label>
+          <input type="text" class="inputfield required" value="" name="username" id="username">
+		  <span class="error_message" id="error_username">Please enter Username</span>
+        </li>
+        <li>
+          <label><strong class="red">*</strong> Password:</label>
+          <input type="password" class="inputfield required" value="" name="password" id="password">
+		  <span class="error_message" id="error_password">Please enter Password</span>
+        </li>
+        <li class="login_button">
+          <button type="submit" class="inputbutton" name="submit" id="submit">Login</button>
+          <a class="app_link" href="">Reset</a>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+  <?php
+	include_once(NAVIGATION_PATH."/footer.php");
+?>

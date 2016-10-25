@@ -1,0 +1,592 @@
+@import "_variable.less";
+@import "_icons.less";
+
+/*Mixins*/
+.font-comic{font-family:Comic Sans MS;}
+.font-common{font-family:helvetica, arial, sans-serif;}
+/*Common CSS*/
+*{
+  box-sizing:border-box;
+}
+a{
+    text-decoration:none;
+    color:@blue1;
+  }
+body{
+  padding:0;
+  margin:0;
+  font-size:14px;
+  background:@white;
+  .font-common();
+}
+ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  color:@blue1;
+}
+
+/*Common Classes*/
+.red{
+  color:@red1;
+}
+.fl{
+  float:left!important;
+}
+.fr{
+  float:right!important;
+}
+.container{
+  padding-top: 20px;
+  width:1024px;
+  margin:0 auto;
+  margin-bottom:30px;
+  height:100%;
+}
+.parent{
+  position:relative;
+}
+.inputfield, .selectBox{
+  height:25px;
+  border:1px solid @grayC;
+  width:250px;
+  padding:0 10px;
+}
+
+.inputbutton, button{
+  display:inline-block;
+  background:@blue1;
+  color:@white;
+  border:1px solid @blue1;
+  padding:0px 15px;
+  font-size:16px;
+  margin-right:5px;
+  cursor:pointer;
+  height:25px;
+  border-radius:3px;
+}
+.app_link{
+  color:@gray9;
+  font-size:16px;
+  margin-right:5px;
+  text-decoration:none;
+  width:auto;
+  display:inline-block;
+}
+
+/*Header*/
+.header{
+  border-bottom:1px solid @blue1;
+  padding:10px;
+  height:70px;
+  width:100%;
+  img{
+    float:left;
+    height:50px;
+  }
+  .welcome_heading{
+    color:#000;
+    float:right;
+    margin-right:50px;
+  }
+  .username_text{
+    color:@blue1;
+  }
+}
+
+/*Nav bar*/
+ul.navbar{
+  padding:10px;
+  margin-bottom:40px;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  box-shadow:0px 12px 20px -10px @grayC;
+  padding-bottom:10px;
+  overflow:hidden;
+  li{
+    width:20%;
+    text-align:center;
+  }
+  li.mobile_nav{
+    display:none;
+  }
+  li.dektop_nav{
+    display:block;
+  }
+  .message_count{
+    position: absolute;
+    background-color: white;
+    border: 1px solid @blue1;
+    z-index: 10;
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 10px;
+    left: -15px;
+  }
+  a{
+    margin:10px;
+    color:@blue1;
+    text-decoration:none;
+    font-size:18px;
+    i{
+      position:relative;
+      top:8px;
+    }
+  }
+}
+
+/*Footer*/
+.footer
+{
+  border-top:1px solid @blue1;
+  background:@white;
+  padding:5px 0;
+  text-align:center;
+  color:@blue1;
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
+
+/*Login Box*/
+.login_box{
+  border: 1px solid @gray9;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  padding: 20px;
+  box-shadow:0 8px 6px -6px @grayC;
+  h3{
+    color:@blue1;
+  }
+  label{
+    display:inline-block;
+    margin:10px 0;
+    width:250px;
+  }
+  .login_button
+  {
+    padding-top:20px;
+  }
+  .signup_link, .forgot_password_link{
+    color:@blue1;
+    font-size:14px;
+    margin-right:5px;
+    text-decoration:none;
+    float:left;
+    width:auto;
+    margin-left:5px;
+  }
+}
+
+/*Left side for notification*/
+.left_side{
+  width:25%;
+  height:600px;
+  float:left;
+  border:1px solid @blue1;
+  padding:5px;
+  background:@white;
+  z-index:100;
+  .notification-bar{
+    li{
+      width:100%;
+      display:inline-block;
+      margin:10px 0;
+      box-shadow:0px 12px 20px -10px @grayC;
+      height: 30px;
+    }
+
+    li.selected {
+        box-shadow:0px 12px 20px -10px @blue1;
+    }
+
+    img{
+      float:left;
+      margin-right:5px;
+    }
+    a{
+      margin-left: 10px;
+    }
+    .accept{
+      background:@blue1;
+      color:@white;
+      padding:3px;
+      border-radius:3px;
+    }
+    .action_div{
+      margin-top:10px;
+    }
+    .post_time{
+      width:100%;
+      display:block;
+      margin-top:10px;
+      color:@gray9;
+      font-size:12px;
+    }
+  }
+}
+.content{
+  width:72%;
+  float:right;
+
+  /*Dashboard*/
+  .update_status{
+    li{
+      position:relative;
+      box-shadow:0px 12px 20px -15px @grayC;
+      padding:10px;
+      margin-bottom:50px;
+      .action_icon{
+        position:absolute;
+        top:10px;
+        right:10px;
+      }
+    }
+    textarea{
+      resize:none;
+      overflow:auto;
+      border:1px solid @grayC;
+      width:80%;
+      height:100px;
+      .font-comic();
+    }
+    .button-div{
+      margin:20px 0 10px 0px;
+      a{
+        margin-right:10px;
+        background:@blue1;
+        color:@white;
+        padding:5px;
+        border-radius:5px;
+      }
+    }
+    .user_data{
+      height:50px;
+      a{
+        color:@blue1;
+      }
+      img{
+        float:left;
+        margin-right:10px;
+      }
+      strong{
+        font-size:16px;
+        display:block;
+      }
+      span.post_time{
+        display:block;
+        font-size:12px;
+        margin-top:5px;
+        color:@gray6;
+      }
+    }
+    .post_data{
+      font-size:16px;
+      color:@gray6;
+      line-height:20px;
+      .font-comic();
+      .image_container{
+        width:100%;
+        max-height:350px;
+        display:inline-block;
+        margin-top:20px;
+        img{
+          max-height:350px;
+          width:100%;
+        }
+      }
+      .image_desc{
+        width:100%;
+        display:block;
+        font-size:13px;
+        margin-top:10px;
+      }
+    }
+    .post_pic, .post_vdo{
+      border:1px solid @grayC;
+      padding:20px;
+      input{
+        width:400px;
+        display:inline-block;
+        margin:10px 0;
+        height:30px;
+        padding:0 5px;
+      }
+    }
+  }
+
+  /*Gallery Page*/
+  .gallery_tab{
+    button{
+      border:1px solid @grayC;
+      height:40px;
+      margin:0;
+      width:48%;
+      background:@blue1;
+      color:@white;
+      cursor:pointer;
+    }
+  }
+  .gallary_grid{
+    width:100%;
+    padding:10px;
+    ul{
+      li{
+        display:inline-block;
+        position:relative;
+        padding:10px;
+        width:170px;
+        span{
+          width: 100%;
+          display: inline-block;
+          height: 20px;
+          text-align: center;
+          font-weight: bold;
+          padding-top: 10px;
+          color:@blue1;
+        }
+        .media_date{
+          font-weight:normal;
+          font-size:12px;
+        }
+        img{
+          width:150px;
+          height:150px;
+          margin:0 auto;
+          border:5px solid @grayC;
+          padding:2px;
+        }
+      }
+    }
+  }
+
+  /*Friends list*/
+  .friends_list{
+    margin:20px 0;
+    li{
+      width:250px;
+      float:left;
+      padding:10px 0;
+    }
+    img{
+      border:1px solid @grayC;
+      padding:5px;
+      float:left;
+    }
+    a{
+      float:left;
+      color:@blue1;
+      font-size:18px;
+      margin:10px;
+    }
+    .friends_icon{
+      width:50%;
+      float:left;
+      padding-left:10px;
+      a{
+        margin:0 5px 0 0;
+      }
+    }
+  }
+
+  /*User Profile*/
+  .profile{
+    .profile_detail{
+      width:100%;
+      display:inline-block;
+      img{
+        float:left;
+      }
+      ul{
+        float:left;
+        li{
+          padding-left:10px;
+          margin-top:5px;
+          color:@blue1;
+          span{
+            font-size:18px;
+          }
+          label{
+            color:@gray6;
+            width:100px;
+          }
+        }
+      }
+    }
+    .profile_status, .profile_friends, .profile_image{
+      float:left;
+      margin:20px 0 0 0;
+      width:45%;
+      background:@grayFA;
+    }
+    .profile_friends, .profile_image{
+      margin:20px 0 0 30px;
+      ul{
+        margin-left:25px;
+      }
+      li{
+        margin:10px 0;
+        width:100px;
+        float:left;
+        img{
+          float:left;
+        }
+        a{
+          float:left;
+          color:@blue1;
+          margin-top:5px;
+        }
+      }
+    }
+  }
+
+  /*Messages*/
+  .message_list{
+    margin:20px 0;
+    li{
+      width:100%;
+      float:left;
+      padding:20px 0;
+      box-shadow:0px 7px 20px -10px @grayC;
+    }
+    img{
+      border:1px solid @grayC;
+      padding:5px;
+      float:left;
+    }
+    a{
+      float:left;
+      color:@blue1;
+      font-size:18px;
+      margin:10px;
+    }
+    .message_icon{
+      width:100px;
+      float:right;
+      padding-left:10px;
+      a{
+        margin:0 5px 0 0;
+      }
+    }
+    ul.message_thread{
+      border:1px solid @grayC;
+      border-radius:10px;
+      float:left;
+      width:100%;
+      padding:10px;
+      margin-top:25px;
+      li{
+        box-shadow:none;
+        .font-comic();
+        font-size:16px;
+        padding:10px;
+        .message_text_mine, .message_text_your{
+          width:85%;
+          float:left;
+          text-align:right;
+          span{
+            border:1px solid @grayC;
+            padding:10px;
+            border-radius:25px;
+            color:@gray3;
+            float:right;
+            font-size:14px;
+          }
+          font{
+            font-size:10px;
+            margin-left:10px;
+            color:@blue1;
+          }
+          label{
+            color:@blue1;
+          }
+        }
+        .message_text_your{
+          text-align:left;
+          span{
+            float:left;
+          }
+        }
+      }
+    }
+    .write_textbox{
+      width:100%;
+      margin-top:30px;
+      float:left;
+      textarea{
+        width:100%;
+        height:100px;
+        resize:none;
+        border-radius:10px;
+        .font-comic();
+        padding:10px;
+        font-size:14px;
+      }
+      button{
+        margin-top:10px;
+      }
+    }
+  }
+
+  /*Settings*/
+  .settings_section{
+    margin:20px 0;
+    display:inline-block;
+    width:100%;
+  }
+  .formTable{
+    border:1px solid @grayC;
+    border-radius:20px;
+    padding:20px;
+    li{
+      padding:10px 0;
+    }
+    label{
+      color:@blue1;
+      font-size:18px;
+      width:200px;
+      display:inline-block;
+    }
+    td{
+      padding:10px 0;
+    }
+    a{
+      color:@blue1;
+      font-size:14px;
+    }
+    b {
+        color: @blue1;
+    }
+  }
+
+  .report-box{
+      display: none;
+  }
+}
+
+.error_message {
+  color: @red1;
+  display: none;
+}
+
+.session_message {
+    border: 1px solid @blue1;
+    position: fixed;
+    top: 100px;
+    background: @white;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 500px;
+    text-align: center;
+    padding: 5px;
+    color: @blue1;
+    font-size: 16px;
+    font-weight: bold;
+}
