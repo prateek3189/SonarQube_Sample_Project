@@ -5,9 +5,11 @@ $(document).ready(function(){
         switch(opt) {
             case 'REPORT':
                 $('.report-box').show();
+                $('.report-box .inputfield').addClass('required');
             break;
             case 'DATABASE':
                 $('.report-box').hide();
+                $('.report-box .inputfield').removeClass('required');
             break;
         }
     });
@@ -30,4 +32,9 @@ $(document).ready(function(){
             return false;
         }
     });
+
+    // Add datepicker
+    $( "#sprintDate" ).datepicker();
+    $( "#startDate" ).datepicker();
+    $( "#endDate" ).datepicker();
 });

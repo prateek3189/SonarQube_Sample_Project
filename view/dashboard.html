@@ -29,6 +29,13 @@
           </li>
 		  <li>
 			<b class="red">*</b>
+            <label>Option:</label>
+			<input type="radio" name="report_option" value="USER_BROKE_RULE" checked/> <b>Get all rules by user</b>
+			<input type="radio" name="report_option" value="ALL_RULE" /> <b>Get all rules</b>
+			<input type="radio" name="report_option" value="ALL_USER" /> <b>Get all user</b>
+          </li>
+		  <li>
+			<b class="red">*</b>
             <label>Action:</label>
 			<input type="radio" name="report_action" value="DATABASE" checked/> <b>Dumb into Database</b>
 			<input type="radio" name="report_action" value="REPORT" /> <b>Generate Report</b>
@@ -36,17 +43,31 @@
 		  <li class="report-box">
 			<b class="red">*</b>
             <label>Directory Path:</label>
-			<input type="text" id="directoryPath" name="directoryPath" value="" class="inputfield required"/>
+			<input type="text" id="directoryPath" name="directoryPath" value="" class="inputfield"/>
 			<span class="error_message" id="error_directoryPath">Please enter Directory Path</span>
           </li>
 		  <li class="report-box">
 			<b class="red">*</b>
             <label>File Name:</label>
-			<input type="text" id="fileName" name="fileName" value="" class="inputfield required"/>
+			<input type="text" id="fileName" name="fileName" value="" class="inputfield"/>
 			<span class="error_message" id="error_fileName">Please enter File Name</span>
           </li>
+		  <li class="report-box">
+			<b class="red">*</b>
+            <label>Start Date:</label>
+			<input type="text" id="startDate" name="startDate" value="" class="inputfield"/>
+			<span class="error_message" id="error_startDate">Please enter Start Date</span>
+          </li>
+		  <li class="report-box">
+			<b class="red">*</b>
+            <label>File Name:</label>
+			<input type="text" id="endDate" name="endDate" value="" class="inputfield dateGreater" data-greater-then="startDate"/>
+			<span class="error_message" id="error_endDate">Please enter End Date</span>
+          </li>
           <li>
-              <button id="submit" name="submit" type="submit">Save</button>
+			  <b class="red"> </b>
+              <label> </label>
+              <button id="submit" name="submit" type="submit">Generate</button>
               <a href="">Reset</a>
           </li>
         </ul>

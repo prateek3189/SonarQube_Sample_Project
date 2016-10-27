@@ -6,11 +6,14 @@
   <div class="content">
 	<h3>Settings</h3>
     <div class="settings_section">
-      <form id="edit_profile" name="edit_profile" action="" method="POST" enctype="multipart/form-data">
-        <ul class="formTable">
+      <form id="setting" name="setting" action="<?php echo CONTROLLER_PATH_HTTP;?>report-controller.php" method="POST">
+		<input type="hidden" id="action" name="action" value="settings" />
+		<ul class="formTable">
           <li>
+			<b class="red">*</b>
             <label>Base URL:</label>
-            <input type="password" id="old_password" name="old_password" value="" class="inputfield"/>
+			<input type="text" id="baseURL" name="baseURL" value="" class="inputfield required"/>
+			<span class="error_message" id="error_baseURL">Please enter Base URL</span>
           </li>
           <li>
               <button id="submit" name="submit" type="submit">Save</button>
@@ -21,19 +24,25 @@
     </div>
 	<h3>Change Password</h3>
     <div class="settings_section">
-      <form id="edit_profile" name="edit_profile" action="" method="POST" enctype="multipart/form-data">
+      <form id="change-password" name="change-password" action="<?php echo CONTROLLER_PATH_HTTP;?>login-controller.php" method="POST">
         <ul class="formTable">
           <li>
-            <label>Old Password:</label>
-            <input type="password" id="old_password" name="old_password" value="" class="inputfield"/>
+			<b class="red">*</b>
+			<label>Old Password:</label>
+			<input type="password" id="oldPassword" name="oldPassword" value="" class="inputfield required"/>
+			<span class="error_message" id="error_oldPassword">Please enter Old Password</span>
           </li>
           <li>
+			<b class="red">*</b>
             <label>New Password:</label>
-            <input type="password" id="new_password" name="new_password" value="" class="inputfield"/>
+			<input type="password" id="newPassword" name="newPassword" value="" class="inputfield required"/>
+			<span class="error_message" id="error_newPassword">Please enter New Password</span>
           </li>
           <li>
-            <label>Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" value="" class="inputfield"/>
+			<b class="red">*</b>
+			<label>Confirm Password:</label>
+			<input type="password" id="confirmPassword" name="confirmPassword" value="" class="inputfield required"/>
+			<span class="error_message" id="error_confirmPassword">Please enter New Password</span>
           </li>
           <li>
               <button id="submit" name="submit" type="submit">Update Password</button>

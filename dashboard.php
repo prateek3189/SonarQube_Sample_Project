@@ -3,10 +3,10 @@
 	include_once("config/config.php");
 
 	//Add CSS
-	$AddCSS	=	array("style");
+	$AddCSS	=	array("style", "jquery-ui");
 
 	//Add JS
-	$AddJS	=	array("jquery", "common");
+	$AddJS	=	array("jquery", "jquery-ui", "common");
 
 	$page = 'GR';
 

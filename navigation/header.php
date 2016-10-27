@@ -29,6 +29,12 @@
 <div class="main">
   <div class="header">
     <a href="dashboard.php"><img src="<?php echo IMAGE_PATH_HTTP."/logo.jpg";?>"/></a>
-	<div class="welcome_heading">Welcome <a href="<?php echo FOLDER_PATH_HTTP;?>logout.php" class="header_logout_link">Logout</a> </div>
+	<?php
+		if(isset($_SESSION['login']) && $_SESSION['login'] === 1) {
+	?>
+		<div class="welcome_heading">Welcome <a href="<?php echo FOLDER_PATH_HTTP;?>logout.php" class="header_logout_link">Logout</a> </div>
+	<?php
+		}
+	?>
 
 	</div>
