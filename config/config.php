@@ -65,4 +65,7 @@
 
 	//Global veriables
 	define("DB_SWITCH","OFF");
+
+    //DB Manager
+    include_once(CONTROLLER_PATH."dbmanager.php");
 ?>

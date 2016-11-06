@@ -38,3 +38,7 @@
 	?>
 
 	</div>
+
+<?php
+	include_once(NAVIGATION_PATH."/session-message.php");
+?>

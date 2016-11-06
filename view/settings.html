@@ -12,7 +12,7 @@
           <li>
 			<b class="red">*</b>
             <label>Base URL:</label>
-			<input type="text" id="baseURL" name="baseURL" value="" class="inputfield required"/>
+			<input type="text" id="baseURL" name="baseURL" value="<?php echo $settingData->base_url;?>" class="inputfield required"/>
 			<span class="error_message" id="error_baseURL">Please enter Base URL</span>
           </li>
           <li>
@@ -41,8 +41,9 @@
           <li>
 			<b class="red">*</b>
 			<label>Confirm Password:</label>
-			<input type="password" id="confirmPassword" name="confirmPassword" value="" class="inputfield required"/>
+			<input type="password" id="confirmPassword" name="confirmPassword" value="" class="inputfield required sameas" data-same-as="newPassword"/>
 			<span class="error_message" id="error_confirmPassword">Please enter New Password</span>
+			<span class="error_message" id="error_sameas_confirmPassword">New Password and Confirm Password must be same.</span>
           </li>
           <li>
               <button id="submit" name="submit" type="submit">Update Password</button>

@@ -1,8 +1,6 @@
 <?php
     include_once("../config/config.php");
 
-    include_once(CONTROLLER_PATH."dbmanager.php");
-
     $action = isset($_POST['action']) ? $_POST['action'] : '';
 
     switch($action) {

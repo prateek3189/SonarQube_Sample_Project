@@ -10,9 +10,6 @@
 
 	$page = 'GR';
 
-	//User Login Flag
-	$_SESSION['login'] = 1;
-
 	//View HTML
 	include_once(VIEW_PATH."/dashboard.html");
 

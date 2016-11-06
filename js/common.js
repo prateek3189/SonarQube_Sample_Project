@@ -17,6 +17,8 @@ $(document).ready(function(){
     // Form Validation
     $('form').submit(function(e){
         var validFlag = 0;
+
+        // Required
         $(this).find('input.required').each(function(){
             var val = $.trim($(this).val());
             var id = $(this).prop('id');
@@ -28,13 +30,33 @@ $(document).ready(function(){
             }
         });
 
+        // Same as
+        $(this).find('.sameas').each(function(){
+            var thisVal     =   $(this).val();
+            var sameAsId    =   $(this).attr('data-same-as');
+            var sameAsVal   =   $('#'+sameAsId).val();
+            alert(thisVal);
+            alert(sameAsVal);
+        });
+        return false;
+
         if(validFlag > 0) {
             return false;
         }
     });
 
     // Add datepicker
-    $( "#sprintDate" ).datepicker();
-    $( "#startDate" ).datepicker();
-    $( "#endDate" ).datepicker();
+    if($('.hasDatepicker').length) {
+        $( "#sprintDate" ).datepicker();
+        $( "#startDate" ).datepicker();
+        $( "#endDate" ).datepicker();
+    }
+
+    // Set timeout of 2000
+    setTimeout(function(){
+        $('.session_message').animate({
+            'opacity': 0
+        }, 1000).hide('2000');
+
+    }, 2000);
 });

@@ -10,6 +10,12 @@
 
 	$page = 'ST';
 
+	// Get data
+	$select = "*";
+	$table = "sq_settings";
+	$where = "is_active = 1";
+	$settingData = $db->select($select, $table, $where);
+
 	//View HTML
 	include_once(VIEW_PATH."/settings.html");
 
